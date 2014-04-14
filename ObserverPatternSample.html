@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Observer Pattern</title>
+	</head>
+	<body> Subject: 
+		<input type="checkbox" value="Subject" id="subjectCheckbox" /> 
+		<div id="container">
+			Observer(s):
+		</div>
+		<input type="button" value="Add Observer" id="addBtn" />
+
+
+		<script type="text/javascript" src="jsutil/CollectionList.js"></script>
+		<script type="text/javascript">
+
+			// Subject::Starts
+			function Subject(){
+				this.observers = new CollectionList();
+			}
+			
+			Subject.prototype.AddObserver = function ( observer ) {
+				this.observers.Add( observer );
+			};
+			
+			Subject.prototype.RemoveObserver = function ( observer ) {
+				this.observers.RemoveAt( this.observers.IndexOf(observer) );
+			};
+			
+			Subject.prototype.Notify = function ( context ) {
+				var observerCount = this.observers.Count();
+				for (var i =  0; i < observerCount; i++) {
+					this.observers.Item(i).Update( context );
+				}
+			};
+			// Subject::Ends
+
+			// Observer:: Starts
+			function Observer() {
+				this.Update = function() {
+					alert("Not implemented");
+				};
+			}
+			// Observer:: Ends
+
+			function extend( extension, obj) {
+				for (var key in extension){
+					obj[key] = extension[key];
+					}
+			}
+			
+
+
+			var subjectCh = document.getElementById("subjectCheckbox");
+			var t = new Subject();
+			extend(t , subjectCh );
+
+			subjectCh["onclick"] = function () { this.Notify(this.checked); };
+
+			var btn = document.getElementById("addBtn");
+			btn["onclick"] = addNewObserver;
+
+			function addNewObserver() {
+				var container = document.getElementById("container");
+				var element = document.createElement("input");
+				element.type = "checkbox";
+
+				extend(new Observer(), element);
+
+				element.Update = function( value ) {
+					this.checked = value;
+				}
+
+				subjectCh.AddObserver(element);
+				container.appendChild(element);
+			}
+		</script>
+	</body>
+</html>
