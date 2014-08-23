@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>CollectionList</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="jsutil/CollectionList.js"></script>
+		<h1>Collection List</h1>
+		A Sample list object supports the following methods:
+		<table>
+			<tr>
+				<td style="font-weight:bold;">
+					Add(obj)
+				</td>
+				<td>
+					Adds an object to the end of the list.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					Clear()
+				</td>
+				<td>
+					Clears all the objects in the list.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					Count()
+				</td>
+				<td>
+					Gets the number of objects in the list.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					IndexOf(obj)
+				</td>
+				<td>
+					Returns the zero-based index of the first occurrance of the object in the list.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					InsertAt(obj, index)
+				</td>
+				<td>
+					Inserts an object to a specific index.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					Item(index)
+				</td>
+				<td>
+					Returns the object at an specific index.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					Remove(obj)
+				</td>
+				<td>
+					Removes the first occurrance of the object from the list.
+				</td>
+			</tr>
+			<tr>
+				<td style="font-weight:bold;">
+					RemoveAt(index)
+				</td>
+				<td>
+					Removes the object from the specific index.
+				</td>
+			</tr>
+		</table>
+		<h3>Example</h3>
+		<hr />
+		<table>
+			<tr>
+				<td>
+					<input type="button" name="btnAdd" id="btnAdd" value="Add To List" onclick="btnAdd_Click();" />
+				</td>
+				<td>
+					<input type="button" name="btnRemove" id="btnRemove" value="Remove From List" onclick="btnRemove_Click();" />
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+
+		var list = new CollectionList();
+
+		function btnAdd_Click() {
+			var valueToAdd = prompt("Value To Add?");
+			list.Add(valueToAdd);
+			alert("List has " + list.Count() + " item(s).");
+		}
+
+		function btnRemove_Click() {
+			var valueToDelete = prompt("Value To Delete?");
+			list.Remove(valueToDelete);
+			alert("List has " + list.Count() + " item(s).");
+		}
+
+		</script>
+	</body>
+</html>
