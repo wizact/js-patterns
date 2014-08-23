@@ -3,6 +3,20 @@
 		<title>Command Pattern</title>
 	</head>
 	<body> 
-		<script type="text/javascript" src="Command.js"></script>
+		<script type="text/javascript" src="js/command.js"></script>
+		<h3>Command Pattern</h3>
+		<input type="button" name="btnAction1" id="btnAction1" value="Execute Action 1" onclick="btnAction1_Click();" />
+		<input type="button" name="btnAction2" id="btnAction2" value="Execute Action 2" onclick="btnAction2_Click();" />
+		<script type="text/javascript">
+
+		function btnAction1_Click() {
+			alert(invoker.execute("action1", "Hello!"));
+		}
+
+		function btnAction2_Click() {
+			alert(invoker.execute("action2", "Bye!"));	
+		}
+
+		</script>
 	</body>
 </html>
