@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Revealing Pattern</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="js/revealing.js"></script>
+    <h3>Revealing Pattern</h3>
+    <input type="button" name="btnSetName" id="btnSetName" value="Set Name" onclick="btnSetName_Click();" />
+    <input type="button" name="btnGetName" id="btnGetName" value="Get Name" onclick="btnGetName_Click();" />
+    <script type="text/javascript">
+
+    var container = revealContainer();
+
+    function btnSetName_Click() {
+      container.setName(prompt("Name?"));
+    }
+
+    function btnGetName_Click() {
+      alert(container.getName());
+    }
+
+    </script>
+  </body>
+</html>
