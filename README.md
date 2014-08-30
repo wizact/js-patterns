@@ -10,6 +10,8 @@ Patterns
 * Observer Pattern
 * Pub-Sub Pattern
 * Revealing Pattern
+* Module Pattern
+* Singleton Pattern
 
 ###Utilities###
 * List Collection
