@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Constructor Pattern</title>
+  </head>
+  <body>
+    <h1>Constructor Pattern</h1>
+    <p>Using constructor/prototype pattern we can create a class-like mechanism in Javascript.<br />
+    Open the console to see the result.
+    </p>
+    <script type="text/javascript" charset="utf-8">
+      function SampleClass(param1, param2) {
+        this.param1 = param1;
+        this.param2 = param2;
+      }
+
+      SampleClass.prototype.result = function() {
+        return this.param1 + this.param2;
+      }
+
+      var sampleClassInstance = new SampleClass(1, 2);
+      console.log(sampleClassInstance.result());
+    </script>
+  </body>
+</html>
