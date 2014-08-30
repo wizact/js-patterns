@@ -5,6 +5,7 @@ Some of the implementations may be a little bit different from the definition of
 
 Patterns
 -------------------
+* Constructor Pattern
 * Command Pattern
 * Observer Pattern
 * Pub-Sub Pattern
@@ -12,3 +13,4 @@ Patterns
 
 ###Utilities###
 * List Collection
+* Object Creation

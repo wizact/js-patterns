@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Object Creation</title>
+  </head>
+  <body>
+    <h1>Object Creation</h1>
+    <p>Object Creation using Object object and defineProperty method. <br />
+      Open the console to see the result.
+    </p>
+    <script type="text/javascript" charset="utf-8">
+      var sampleObject = Object.create(null);
+      Object.defineProperty(sampleObject, "sampleProperty", {
+        value: 1,
+        writable : true,
+        enumerable: true,
+        configurable: true
+      });
+
+      console.log(sampleObject.sampleProperty);
+    </script>
+  </body>
+</html>
