@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Singleton Pattern</title>
+  </head>
+  <body>
+    <h1>Singleton</h1>
+    <p>Songleton pattern. Implementing getInstance() method.<br/>
+    Both instances are pointing to the same instance.</p>
+    <script type="text/javascript" charset="utf-8">
+      var sampleSingleton = (function() {
+        var instance;
+        var counter = 0;
+        function init() {
+          return {
+            increment: function() {
+            counter++;
+            },
+            print: function() {
+              console.log(counter);
+            }
+        };
+      };
+
+
+        return {
+          getInstance: function() {
+            if (!instance) {
+              instance = init();
+            }
+            return instance;
+          }
+        };
+
+      })();
+
+      var instance1 = sampleSingleton.getInstance();
+      var instance2 = sampleSingleton.getInstance();
+      instance1.increment();
+      instance2.increment();
+      instance1.print();
+      instance2.print();
+    </script>
+  </body>
+</html>
