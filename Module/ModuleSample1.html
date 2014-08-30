@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Module Pattern - Sample 1</title>
+  </head>
+  <body>
+    <h1>Module Pattern - Sample 1</h1>
+    <p>Using Closure to implement Module pattern</p>
+    <script type="text/javascript" charset="utf-8">
+      var sampleModule = (function() {
+        var privateProperty = 0;
+
+        return {
+          increment: function() {
+            privateProperty ++;
+          },
+
+          reset: function() {
+            privateProperty = 0;
+          },
+
+          print: function() {
+            console.log(privateProperty);
+          }
+        }
+      })();
+
+      sampleModule.increment();
+      sampleModule.increment();
+      sampleModule.print();
+      sampleModule.reset();
+      sampleModule.increment();
+      sampleModule.print();
+    </script>
+  </body>
+</html>

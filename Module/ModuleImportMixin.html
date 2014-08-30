@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Module Pattern - Mixin</title>
+  </head>
+  <body>
+    <h1>Module Pattern - Sample 1</h1>
+    <p>Using Mixins to implement Module pattern. <br/>
+    This shows how to import global objects to the module</p>
+    <script type="text/javascript" charset="utf-8">
+
+    // Logger to import in sample module
+    var loggerModule = (function() {
+      return {
+        log: function(value) {
+          console.log(value);
+        }
+      };
+    })();
+
+    // Global module
+    var sampleModule = (function(logger) {
+      var counter = 0;
+
+      return {
+        increment: function() {
+          counter++;
+        },
+        print: function() {
+          logger.log(counter);
+        }
+      }
+
+    })(loggerModule);
+
+    sampleModule.increment();
+    sampleModule.print();
+    </script>
+  </body>
+</html>

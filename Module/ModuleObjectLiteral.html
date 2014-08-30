@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Module Pattern - Object Literal</title>
+  </head>
+  <body>
+    <h1>Module Pattern - Object Literal</h1>
+    <p>Using Object Literals to implement Module pattern</p>
+    <script type="text/javascript" charset="utf-8">
+      var sampleObjLiteral = {
+        sampleProperty1: "String Value",
+        sampleProperty2: 1,
+        sampleProperty3: function(value) {
+          console.log(value);
+        },
+        sampleProperty4: {
+          nestedPropery41: "Nested Value"
+        }
+      };
+
+      console.log(sampleObjLiteral.sampleProperty1);
+      console.log(sampleObjLiteral.sampleProperty4.nestedPropery41);
+      sampleObjLiteral.sampleProperty3("test");
+      
+    </script>
+  </body>
+</html>
