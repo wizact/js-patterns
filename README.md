@@ -1,6 +1,6 @@
 JavaScript Patterns
 ===================
-This is a collection of JavaScript patterns that will be get updated and refined gradually.
+This is a collection of JavaScript patterns that will get updated and refined gradually.
 Some of the implementations may be a little bit different from the definition of actual pattern.
 
 Patterns
@@ -12,6 +12,16 @@ Patterns
 * Revealing Pattern
 * Module Pattern
 * Singleton Pattern
+
+Node Examples
+--------------------
+* Clustering
+* Control Flow using (vasync)
+* Error Handling
+* Event Emitter
+* Logging (bunyan)
+* Stream
+
 
 ###Utilities###
 * List Collection
