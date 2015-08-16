@@ -21,6 +21,7 @@ Node Examples
 * Event Emitter
 * Logging (bunyan)
 * Stream
+* Domain
 
 
 ###Utilities###
